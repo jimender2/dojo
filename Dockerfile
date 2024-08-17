@@ -26,7 +26,7 @@ RUN cd /tmp && \
     ./aws/install && \
     rm -rf awscliv2.zip aws
 
-RUN git clone --branch 3.6.0 https://github.com/CTFd/CTFd /opt/CTFd
+RUN git clone --branch 3.7.3 https://github.com/CTFd/CTFd /opt/CTFd
 
 RUN ln -s /opt/pwn.college/etc/systemd/system/pwn.college.service /etc/systemd/system/pwn.college.service && \
     ln -s /opt/pwn.college/etc/systemd/system/pwn.college.backup.service /etc/systemd/system/pwn.college.backup.service && \
