@@ -88,6 +88,11 @@ def sync_canvas(dojo, module=None, user_id=None, ignore_pending=False):
     if user_id is not None:
         users = users.filter(DojoStudents.user_id == user_id)
 
+    # The user does not exist as a  or there are no dogos setup
+    if users.count() == 0:
+        # returns progress_info which in this case should be no progress
+        return {}
+
     canvas_assignments = {}
     page = 1
     while True:
